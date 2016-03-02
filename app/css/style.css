@@ -1,0 +1,39 @@
+* {
+  font-family: "Roboto Mono", Menlo, monospace; }
+
+.container {
+  margin: 0 5%; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul.todo {
+    list-style: none;
+    margin-top: 20px; }
+    ul.todo li {
+      background: #eeeeee;
+      padding: 10px;
+      border-bottom: 1px solid #ccc; }
+      ul.todo li label {
+        cursor: pointer;
+        padding-right: 15px; }
+      ul.todo li .remove {
+        width: 16px;
+        height: 16px;
+        background: url("../images/icons/remove.png");
+        float: right;
+        cursor: pointer; }
+  ul.addForm {
+    list-style: none; }
+    ul.addForm input, ul.addForm button {
+      border-radius: 5px; }
+    ul.addForm input {
+      border: 1px solid #eeeeee;
+      padding: 5px; }
+    ul.addForm button {
+      padding: 6px 20px;
+      border: 0;
+      color: #ffffff;
+      background: linear-gradient(180deg, #006600, #008800); }
+    ul.addForm button:hover {
+      background: linear-gradient(180deg, #008800, #006600); }
