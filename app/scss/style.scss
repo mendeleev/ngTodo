@@ -24,13 +24,25 @@ ul {
         padding-right:15px;
       }
 
-      .remove {
+      .icons {
+        float: right;
+      }
+
+      .icon {
+        display: inline-block;
         width: 16px;
         height: 16px;
-        background: url("../images/icons/remove.png");
-        float:right;
         cursor: pointer;
+
+        &.remove {
+          background: url("../images/icons/remove.png") no-repeat;
+        }
+
+        &.edit {
+          background: url("../images/icons/edit.png") no-repeat;
+        }
       }
+
     }
 
   }

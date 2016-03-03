@@ -17,12 +17,17 @@ ul {
       ul.todo li label {
         cursor: pointer;
         padding-right: 15px; }
-      ul.todo li .remove {
+      ul.todo li .icons {
+        float: right; }
+      ul.todo li .icon {
+        display: inline-block;
         width: 16px;
         height: 16px;
-        background: url("../images/icons/remove.png");
-        float: right;
         cursor: pointer; }
+        ul.todo li .icon.remove {
+          background: url("../images/icons/remove.png") no-repeat; }
+        ul.todo li .icon.edit {
+          background: url("../images/icons/edit.png") no-repeat; }
   ul.addForm {
     list-style: none; }
     ul.addForm input, ul.addForm button {

@@ -15,9 +15,9 @@
 <div class="container" ng-controller="testCtrl as test">
     <h2>TODO application</h2>
 
-    <form action="javascript:void(0);" ng-submit="test.add(newItem); newItem='';">
+    <form action="javascript:void(0);" ng-submit="test.add(test.field);">
         <ul class="addForm">
-            <li><input type="text" ng-model="newItem" />
+            <li><input type="text" ng-model="test.field" />
                 <button type="submit">add</button>
             </li>
         </ul>
@@ -37,7 +37,10 @@
                            ng-change="test.change(item);"/>
                     {{item.title}}
                 </label>
-                <span class="remove" ng-click="test.remove(item);"></span>
+                <span class="icons">
+                    <span class="icon edit" ng-click="test.edit(item);"></span>
+                    <span class="icon remove" ng-click="test.remove(item);"></span>
+                </span>
             </li>
         </ul>
     </form>
