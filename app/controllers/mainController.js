@@ -10,21 +10,40 @@
     this.field = "";
     this.items = JSON.parse(localStorage.getItem("todo") || "[]") || [];
 
+    /**
+     * saves data to localStorage
+     * @returns {*}
+     */
     this.save = function() {
-      localStorage.setItem("todo", JSON.stringify(this.items));
+      return localStorage.setItem("todo", JSON.stringify(this.items));
     };
 
-    this.change = function (item) {
-      this.save();
+    /**
+     * do it when we change something
+     * @returns {*}
+     */
+    this.change = function () {
+      return this.save();
     };
 
+    /**
+     * removes item from the list
+     * @param item
+     * @returns {boolean}
+     */
     this.remove = function(item) {
       if(this.items.indexOf(item) >= 0) {
         this.items.splice(this.items.indexOf(item), 1);
         this.save();
       }
+
+      return true;
     };
 
+    /**
+     * add a new item to the list
+     * @param title - title for new item
+     */
     this.add = function(title) {
       if(title && title.length > 1) {
 
@@ -43,11 +62,19 @@
       }
     };
 
+    /**
+     * reinitialize the list with and empty array
+     * @returns {*}
+     */
     this.clear = function() {
       this.items = [];
-      this.save();
+      return this.save();
     };
 
+    /**
+     * initialize field with a title which we wanna edit
+     * @param item
+     */
     this.edit = function(item) {
       this.field = item.title;
       this.currentItem = item;
